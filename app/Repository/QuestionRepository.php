@@ -17,12 +17,19 @@ class QuestionRepository
     {
         return Question::get();
     }
-    public static function getQuestionTypeById($questionTypeId)
+    public static function getQuestionTypeWithId($questionTypeId)
     {
-        // return Question::where('questionTypeId',$questionTypeId)->get();
-        return Question::with('questionType')
-            ->where('questionTypeId', $questionTypeId)
-            ->get();
+        return Question::where('questionTypeId', $questionTypeId)
+        ->get();
+        // return Question::with('question.questionType')
+        //     ->where('questionTypeId', $questionTypeId)
+        //     ->get();
+        // $question = Question::where('question.questionTypeId','=',$questionTypeId)
+        // ->orderBy('question.questionId','ASC')->get();
+        // return $question;
+        //  Question::where('question.questionTypeId','=',$questionTypeId)
+        // ->orderBy('question.questionId','ASC')->get();
+       
     }
     // public static function getQuestionTypeById($questionTypeId)
     // {

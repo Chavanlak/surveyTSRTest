@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\QuestiontypeController;
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\SurveytsrformController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,9 @@ Route::get('/t/{questionTypeId}',[QuestionController::class,'getQuestionWithQues
 // Route::get('/survey', [QuestionController::class, 'getQuestionWithQuestionType']);
 
 Route::get('/questions', [QuestionController::class, 'showQuestions']);
+
+// 
+Route::get('/survetsrfrom/{questionId}',[SurveytsrformController::class,'GetSurveyTsrForm']);
+Route::get('/survey',[SurveytsrformController::class,'submitSurveyTsrFrom']);
+
+Route::get('/gatall',[SurveytsrformController::class,'gatall']);

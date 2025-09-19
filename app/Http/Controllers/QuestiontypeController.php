@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class QuestiontypeController extends Controller
 {
     public static function Showallquestiontypes(){
-        $type = QuestiontypeRepository::getAllQuestiontypes();
-        return view('showalltype', compact('type'));
+        $typeList = QuestiontypeRepository::getAllQuestiontypes();
+        return view('surveytsrform', compact('typeList'));
     }
 }
