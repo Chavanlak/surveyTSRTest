@@ -14,6 +14,7 @@ class QuestiontypeRepository
    {
     return Questiontype::where('questionTypeId',$questionTypeId)->first();
    }
-   
+
+
 }
 ?>

@@ -26,8 +26,12 @@ Route::get('/t/{questionTypeId}',[QuestionController::class,'getQuestionWithQues
 
 Route::get('/questions', [QuestionController::class, 'showQuestions']);
 
-// 
+//
 Route::get('/survetsrfrom/{questionId}',[SurveytsrformController::class,'GetSurveyTsrForm']);
 Route::get('/survey',[SurveytsrformController::class,'submitSurveyTsrFrom']);
 
-Route::get('/gatall',[SurveytsrformController::class,'gatall']);
+Route::get('/SurveyTsr',[SurveytsrformController::class,'getallSurveyTsr']);
+Route::post('/submit/survey',[SurveytsrformController::class,'submitall']);
+Route::get('/testSurvey', function () {
+    return view('testSurvey');
+});
